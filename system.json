@@ -1,0 +1,30 @@
+{
+  "id": "7thsea",
+  "title": "7th Sea (Tharivol)",
+  "description": "Sistema di gioco di ruolo base per 7th Sea su Foundry Virtual Tabletop.",
+  "version": "0.0.1",
+  "compatibility": {
+    "minimum": "13.344",
+    "verified": "13"
+  },
+  "scripts": [
+    "7thsea.js"
+  ],
+  "styles": [
+    "styles/7thsea.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "grid.distance": 5,
+  "grid.units": "piedi",
+  "system": [ "7thsea" ],
+  "packs": [],
+  "url": "https://github.com/tuo-utente/7thsea",
+  "manifest": "https://raw.githubusercontent.com/tuo-utente/7thsea/main/system.json",
+  "download": "https://github.com/tuo-utente/7thsea/archive/main.zip"
+}

@@ -1,0 +1,49 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    
+    {{!-- Head dell'applicazione --}}
+    <header class="sheet-header">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Nome del Personaggio" /></h1>
+            
+            {{!-- Tipo di Risorsa base (qui un'ipotetica Barra della Salute/Ferite) --}}
+            <div class="resource">
+                <label>Salute</label>
+                <input type="text" name="system.health.value" value="{{systemData.health.value}}" data-dtype="Number"/> / 
+                <input type="text" name="system.health.max" value="{{systemData.health.max}}" data-dtype="Number"/>
+            </div>
+        </div>
+    </header>
+
+    {{!-- Corpo del Foglio --}}
+    <section class="sheet-body">
+        
+        {{!-- Tabella degli Attributi (Esempio: Arguzia e Mischia) --}}
+        <div class="tab attributes" data-group="primary" data-tab="attributes">
+            <h2>Attributi</h2>
+            
+            {{#each systemData.attributes as |attribute key|}}
+            <div class="attribute-row flexrow">
+                <label for="system.attributes.{{key}}.value" class="resource-label roll-{{key}}">{{attribute.label}}</label>
+                <input type="text" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number"/>
+            </div>
+            {{/each}}
+            
+            <hr/>
+            
+            {{!-- Esempio di un campo numerico specifico di 7th Sea --}}
+            <div class="attribute-row flexrow">
+                <label for="system.ranks.value">Livello Eroe (Ranks)</label>
+                <input type="text" name="system.ranks.value" value="{{systemData.ranks.value}}" data-dtype="Number"/>
+            </div>
+            
+        </div>
+
+        {{!-- Tabella dell'Inventario/Descrizione --}}
+        <div class="tab inventory" data-group="primary" data-tab="inventory">
+            <h2>Descrizione</h2>
+            {{editor systemData.description target="system.description" button=true owner=owner editable=editable}}
+        </div>
+        
+    </section>
+</form>

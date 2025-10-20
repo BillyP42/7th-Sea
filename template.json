@@ -1,0 +1,55 @@
+{
+  "Actor": {
+    "types": ["character", "npc"],
+    "templates": {
+      "base": {
+        "health": {
+          "value": 10,
+          "min": 0,
+          "max": 10
+        },
+        "description": ""
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "attributes": {
+        "brawling": {
+          "value": 1,
+          "label": "Mischia"
+        },
+        "wits": {
+          "value": 1,
+          "label": "Arguzia"
+        }
+      },
+      "ranks": {
+        "value": 0,
+        "max": 10
+      }
+    },
+    "npc": {
+      "templates": ["base"],
+      "danger": 1,
+      "skill": 3
+    }
+  },
+  "Item": {
+    "types": ["skill", "background", "advantage"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "skill": {
+      "templates": ["base"],
+      "rank": 1
+    },
+    "background": {
+      "templates": ["base"]
+    },
+    "advantage": {
+      "templates": ["base"]
+    }
+  }
+}
