@@ -24,7 +24,7 @@
   "grid.units": "piedi",
   "system": [ "7thsea" ],
   "packs": [],
-  "url": "https://github.com/BillyP42/7thsea",
-  "manifest": "https://raw.githubusercontent.com/BillyP42/7thsea/main/system.json",
+  "url": "https://github.com/BillyP42/7th-Sea",
+  "manifest": "https://raw.githubusercontent.com/BillyP42/7th-Sea/main/system.json",
   "download": "https://github.com/BillyP42/7thsea/archive/main.zip"
 }
