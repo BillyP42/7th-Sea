@@ -7,7 +7,7 @@
     "minimum": "13.344",
     "verified": "13"
   },
-  "scripts": [
+  "esmodules": [
     "7thsea.js"
   ],
   "styles": [
