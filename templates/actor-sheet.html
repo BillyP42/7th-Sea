@@ -1,12 +1,12 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
     
-    {{!-- Head dell'applicazione --}}
+    {{!-- head}}
     <header class="sheet-header">
         <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Nome del Personaggio" /></h1>
             
-            {{!-- Tipo di Risorsa base (qui un'ipotetica Barra della Salute/Ferite) --}}
+            {{!-- risorse}}
             <div class="resource">
                 <label>Salute</label>
                 <input type="text" name="system.health.value" value="{{systemData.health.value}}" data-dtype="Number"/> / 
